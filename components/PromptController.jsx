@@ -22,7 +22,6 @@ const PromptController = ({
 
     try {
       setLoading(true);
-      console.log(`https://api.openai.com/v1/engines/${engine}/completions`);
 
       await axios
         .post(

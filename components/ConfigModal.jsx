@@ -63,7 +63,7 @@ const ConfigModal = ({
         </button>
       </div>
 
-      <div className="mt-4 space-y-4">
+      <div className="mt-6 space-y-4">
         <div>
           <div className="flex items-center justify-between">
             <label id="temperatureEditor">Temperature</label>
@@ -71,7 +71,10 @@ const ConfigModal = ({
           </div>
           <p className="text-sm opacity-60 mt-0.5">
             What sampling temperature to use. Higher values means the model will
-            take more risks. Try 0.9 for more creative applications, and 0 for
+            take more risks. Try&nbsp;
+            <span className="text-emerald-700 font-medium">0.9</span>&nbsp;for
+            more creative applications, and&nbsp;
+            <span className="text-emerald-700 font-medium">0</span>&nbsp;for
             ones with a well-defined answer.
           </p>
 
@@ -93,9 +96,12 @@ const ConfigModal = ({
             <span className="">{presencePenalty}</span>
           </div>
           <p className="text-sm opacity-60 mt-0.5">
-            Number between -2.0 and 2.0. Positive values penalize new tokens
-            based on whether they appear in the text so far, increasing the
-            model's likelihood to talk about new topics.
+            Number between&nbsp;
+            <span className="text-emerald-700 font-medium">-2.0</span>
+            &nbsp;and&nbsp;
+            <span className="text-emerald-700 font-medium">2.0</span>. Positive
+            values penalize new tokens based on whether they appear in the text
+            so far, increasing the model's likelihood to talk about new topics.
           </p>
           <input
             type="range"

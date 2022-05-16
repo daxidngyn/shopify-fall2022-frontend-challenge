@@ -1,6 +1,12 @@
+import { motion } from "framer-motion";
+
 const LoadingCard = () => {
   return (
-    <div className="bg-white rounded-md shadow-md px-4 py-6 h-48">
+    <motion.div
+      initial={{ y: -50, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      className="bg-white rounded-md shadow-md px-4 py-6 h-48"
+    >
       <div className="grid grid-cols-12 w-full gap-4 animate-pulse">
         <div className="h-2 bg-zinc-200 rounded col-start-14 col-span-3" />
         <div className="h-2 bg-zinc-200 rounded col-start-12 col-span-1" />
@@ -21,7 +27,7 @@ const LoadingCard = () => {
           <div className="h-2 bg-zinc-200 rounded col-span-4" />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
