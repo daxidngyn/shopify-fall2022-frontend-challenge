@@ -22,7 +22,7 @@ const PromptController = ({
 
     try {
       setLoading(true);
-      console.log(`https://api.openai.com/v1/engines/${engine}/completions`);
+      console.log(process.env.NEXT_PUBLIC_OPENAI_SECRET);
 
       await axios
         .post(
@@ -64,6 +64,7 @@ const PromptController = ({
         });
     } catch (err) {
       console.error(err);
+      setLoading(false);
     }
   };
 
