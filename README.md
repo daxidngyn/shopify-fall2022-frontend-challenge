@@ -6,15 +6,6 @@ Created by [David Nguyen](https://www.davidnguyen.at), using Next.js and Tailwin
 
 Check out the finished project [here](https://shopify-fall2022-frontend-challenge.vercel.app/)!
 
-## Features
-
-- Previous responses are saved through local storage
-- Customize settings such as `temperature` and `presencePenalty` through the config modal
-
-## Planned Features
-
-- Fade in / bounce animation on new responses
-
 ## Installation & Usage
 
 First, clone the repository and install dependancies:
