@@ -19,11 +19,11 @@ First, clone the repository and install dependancies:
 
 ```bash
 # Clone the repository
-git clone x
+git clone https://github.com/daxidngyn/shopify-fall2022-frontend-challenge.git
 # Enter the project directory
-cd x
+cd shopify-fall2022-frontend-challenge
 # Install dependencies
-yarn add
+yarn
 ```
 
 In the project directory, you can run:

@@ -40,7 +40,7 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="flex-grow bg-slate-100 px-6 md:px-8">
       <Head>
         <title>David Nguyen | Shopify Fall2022 Frontend Intern Challenge</title>
         <meta
@@ -49,56 +49,54 @@ export default function Home() {
         />
       </Head>
 
-      <div className="px-6 md:px-8 bg-slate-100 flex-grow">
-        <div className="max-w-screen-xl mx-auto py-12">
-          <h1 className="text-4xl font-semibold">Fun with GPT-3</h1>
+      <div className="max-w-screen-xl mx-auto py-12">
+        <h1 className="text-4xl font-semibold">Fun with GPT-3</h1>
 
-          <PromptController
-            engine={engine}
-            temperature={temperatureVal}
-            presencePenalty={presencePenaltyVal}
-            toggleConfigModal={toggleConfigModal}
-            setLoading={setLoading}
-            loading={loading}
-          />
-
-          <section className="mt-8" aria-labelledby="responses-title">
-            <div className="flex items-center justify-between">
-              <h2 className="text-3xl font-medium" id="responses-title">
-                Responses
-              </h2>
-
-              <button type="button" onClick={clearResponses}>
-                Clear
-              </button>
-            </div>
-
-            <div className="mt-2 space-y-4">
-              {loading && <LoadingCard />}
-              {completionData.length > 0 ? (
-                <>
-                  {completionData.map((completion) => (
-                    <ResponseCard key={completion.id} completion={completion} />
-                  ))}
-                </>
-              ) : (
-                <NoResponsesCard />
-              )}
-            </div>
-          </section>
-        </div>
-
-        <ConfigModal
-          isOpen={configModalOpen}
-          toggleIsOpen={toggleConfigModal}
+        <PromptController
           engine={engine}
-          setEngine={setEngine}
           temperature={temperatureVal}
-          setTemperature={setTemperatureVal}
           presencePenalty={presencePenaltyVal}
-          setPresencePenalty={setPresencePenaltyVal}
+          toggleConfigModal={toggleConfigModal}
+          setLoading={setLoading}
+          loading={loading}
         />
+
+        <section className="mt-8" aria-labelledby="responses-title">
+          <div className="flex items-center justify-between">
+            <h2 className="text-3xl font-medium" id="responses-title">
+              Responses
+            </h2>
+
+            <button type="button" onClick={clearResponses}>
+              Clear
+            </button>
+          </div>
+
+          <div className="mt-2 space-y-4">
+            {loading && <LoadingCard />}
+            {completionData.length > 0 ? (
+              <>
+                {completionData.map((completion) => (
+                  <ResponseCard key={completion.id} completion={completion} />
+                ))}
+              </>
+            ) : (
+              <NoResponsesCard />
+            )}
+          </div>
+        </section>
       </div>
+
+      <ConfigModal
+        isOpen={configModalOpen}
+        toggleIsOpen={toggleConfigModal}
+        engine={engine}
+        setEngine={setEngine}
+        temperature={temperatureVal}
+        setTemperature={setTemperatureVal}
+        presencePenalty={presencePenaltyVal}
+        setPresencePenalty={setPresencePenaltyVal}
+      />
     </div>
   );
 }
