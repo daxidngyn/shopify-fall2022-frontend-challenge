@@ -4,6 +4,8 @@ Created by [David Nguyen](https://www.davidnguyen.at), using Next.js and Tailwin
 
 > GPT-3 is a powerful AI model created by OpenAI. It can process plain text prompts and produce outputs that are hard to distinguish from human writing. This app sends plain text prompts to the OpenAI API and displays the results in a list.
 
+Check out the finished project [here](https://shopify-fall2022-frontend-challenge.vercel.app/)!
+
 ## Features
 
 - Previous responses are saved through local storage
