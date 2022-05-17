@@ -23,4 +23,8 @@ In the project directory, you can run:
 
 `yarn dev`
 
-> Starts a local web server. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+> Starts a local web server. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result. When deploying this application or running locally, make sure to supply a valid `NEXT_PUBLIC_OPENAI_SECRET` key inside of `.env.local`.
+
+`yarn build`
+
+> Builds the app for production generated inside of the `.next` folder
