@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import "../styles/globals.css";
 import CompletionContextProvider from "../util/frontend/CompletionContext";
@@ -10,6 +11,8 @@ function MyApp({ Component, pageProps }) {
         <div className="pt-16 min-h-screen flex flex-col overflow-hidden">
           <Component {...pageProps} />
         </div>
+
+        <Footer />
       </div>
     </CompletionContextProvider>
   );

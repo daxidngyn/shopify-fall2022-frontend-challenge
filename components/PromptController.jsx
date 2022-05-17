@@ -75,7 +75,7 @@ const PromptController = ({
               Prompt
             </label>
             <button type="button" onClick={() => setQuery(prevQuery)}>
-              <HiOutlineRefresh className="opacity-70 hover:animate-spin" />
+              <HiOutlineRefresh className="opacity-70 hover:-rotate-90 transition" />
             </button>
           </div>
 

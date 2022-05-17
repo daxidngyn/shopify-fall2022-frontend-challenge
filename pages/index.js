@@ -61,7 +61,7 @@ export default function Home() {
           loading={loading}
         />
 
-        <section className="mt-8" aria-labelledby="responses-title">
+        <section className="mt-12" aria-labelledby="responses-title">
           <div className="flex items-center justify-between">
             <h2 className="text-3xl font-medium" id="responses-title">
               Responses
@@ -81,7 +81,7 @@ export default function Home() {
                 ))}
               </>
             ) : (
-              <NoResponsesCard />
+              <>{!loading && <NoResponsesCard />}</>
             )}
           </div>
         </section>
